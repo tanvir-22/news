@@ -1,14 +1,19 @@
 import Header from "@/components/shared/Header";
 import Navbar from "@/components/shared/Navbar";
-import Image from "next/image";
+import Marq from "@/components/shared/Marq";
+import LeftSidebar from "@/components/homepage/news/LeftSidebar";
+import RightSidebar from "@/components/homepage/news/RightSidebar";
+import { redirect } from "next/navigation";
 
-export default function Home() {
+export default async function Home() {
   return (
     <div>
       <main>
         <Header />
         <Navbar />
-        <p>Welcome to the home page</p>
+        <Marq />
+
+        {redirect("/category/01")}
       </main>
     </div>
   );
