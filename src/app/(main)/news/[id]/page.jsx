@@ -3,6 +3,18 @@ import RightSidebar from "@/components/homepage/news/RightSidebar";
 import Image from "next/image";
 import { getNewsById } from "@/lib/data";
 import Link from "next/link";
+
+export const generateMetadata = async ({ params, searchParams }) => {
+  const { id } = await params;
+  const news = await getNewsById(id);
+  const data = news?.data[0];
+  console.log(data);
+  return {
+    title: data.title,
+    description: data.details,
+  };
+};
+
 const Detailspage = async ({ params }) => {
   const { id } = await params;
 

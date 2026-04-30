@@ -6,7 +6,7 @@ import { FaEye } from "react-icons/fa";
 import Link from "next/link";
 const NewsCard = ({ item }) => {
   return (
-    <div className="py-3">
+    <div className="py-3 ">
       <div className="flex justify-between bg-[#F3F3F3] p-3 items-center rounded-md my-2 ">
         <div className="flex gap-2 ">
           <Image

@@ -1,6 +1,4 @@
 import React from "react";
-import Header from "@/components/shared/Header";
-import Navbar from "@/components/shared/Navbar";
 import Marq from "@/components/shared/Marq";
 import LeftSidebar from "@/components/homepage/news/LeftSidebar";
 import RightSidebar from "@/components/homepage/news/RightSidebar";
@@ -26,7 +24,7 @@ const NewsByCategorypage = async ({ params }) => {
           <div className=" col-span-3">
             <LeftSidebar categories={categories} activeId={id} />
           </div>
-          <div className=" col-span-6">
+          <div className=" col-span-6 h-screen overflow-y-scroll">
             <p className="font-bold py-2">Dragon news home</p>
             {news.length > 0 ? (
               news.map((item) => {
