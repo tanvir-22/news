@@ -1,8 +1,12 @@
-"use client"
+"use client";
 import React from "react";
 import { AiFillGoogleCircle } from "react-icons/ai";
 import { AiFillGithub } from "react-icons/ai";
 import { authClient } from "@/lib/auth-client";
+import swim from "../../../../public/assets/swimming.png";
+import classroom from "../../../../public/assets/class.png";
+import playground from "../../../../public/assets/playground.png";
+import Image from "next/image";
 const RightSidebar = () => {
   const handleGoogleSignIn = async () => {
     const data = await authClient.signIn.social({
@@ -26,6 +30,22 @@ const RightSidebar = () => {
             Login with Github
           </button>
         </div>
+      </div>
+      <div className="mt-5 w-full flex flex-col justify-center items-center bg-white rounded-md">
+        <h1 className=" font-bold">Q-Zone</h1>
+        <Image src={swim} alt="swimming child" width={200} height={300}></Image>
+        <Image
+          src={classroom}
+          alt="swimming child"
+          width={200}
+          height={300}
+        ></Image>
+        <Image
+          src={playground}
+          alt="swimming child"
+          width={200}
+          height={300}
+        ></Image>
       </div>
     </div>
   );
